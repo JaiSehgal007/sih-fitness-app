@@ -24,7 +24,7 @@ MotionMentor is a cutting-edge fitness app designed to guide users in performing
 
 2. Navigate to the project directory:
    ```
-   cd moo
+   cd sih-fitness-app
    ```
 
 3. Install the required dependencies:
@@ -41,6 +41,7 @@ MotionMentor is a cutting-edge fitness app designed to guide users in performing
 
 
 ## Technology Stack:
-- React-Native for the frontend
+- MediaPipe and OpenCV for building Machine Leaning Model
+- React for the frontend
 - Node/Express for the backend
-- Google Cloud services for the database
+- MongoDb for the database
