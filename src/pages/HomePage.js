@@ -5,7 +5,7 @@ import FitCoachContainer from "../components/FitCoachContainer";
 
 const HomePage = () => {
   return (
-    <div className="relative bg-black w-[1441px] h-[1284px] text-center text-[14.34px] text-white font-leading-tight-text-sm-font-normal">
+    <div className="relative bg-black w-screen h-[1284px] text-center text-[14.34px] text-white font-leading-tight-text-sm-font-normal">
       <div className="absolute top-[calc(50%_-_578px)] left-[calc(50%_-_608.5px)] h-[1284px] flex flex-col items-center justify-center gap-[34.42px]">
         <div className="rounded-[71.7px] overflow-hidden flex flex-row py-[7.170467853546143px] px-[14.340935707092285px] items-start justify-start border-[0.7px] border-solid border-white">
           <div className="relative leading-[150%] uppercase">
@@ -55,7 +55,7 @@ const HomePage = () => {
         </div>
       </div>
       <Header />
-      <div className="absolute top-[1284px] left-[0px] bg-black w-[1441px] h-[629px] overflow-hidden flex flex-col py-32 px-[314px] box-border items-center justify-center text-[52.9px]">
+      <div className="absolute top-[1284px] left-[0px] bg-black w-screen h-[629px] overflow-hidden flex flex-col py-32 px-[314px] box-border items-center justify-center text-[52.9px]">
         <div className="flex flex-col items-center justify-start gap-[84.65px]">
           <div className="flex flex-col items-center justify-center gap-[31.74px]">
             <b className="relative tracking-[-0.03em] leading-[110%]">

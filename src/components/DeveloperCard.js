@@ -2,7 +2,7 @@ import ContainerCardForm from "./ContainerCardForm";
 
 const DeveloperCard = () => {
   return (
-    <div className="absolute top-[2556px] left-[0px] bg-black w-[1441px] h-[636px] overflow-hidden flex flex-col pt-[120px] px-[120px] pb-[138px] box-border items-center justify-center gap-[10px] text-center text-31xl text-white font-leading-tight-text-sm-font-normal">
+    <div className="absolute top-[2556px] left-[0px] bg-black w-screen h-[636px] overflow-hidden flex flex-col pt-[120px] px-[120px] pb-[138px] box-border items-center justify-center gap-[10px] text-center text-31xl text-white font-leading-tight-text-sm-font-normal">
       <div className="flex flex-col items-center justify-start">
         <div className="flex flex-col items-center justify-center gap-[24px]">
           <b className="relative tracking-[-0.03em] leading-[110%]">

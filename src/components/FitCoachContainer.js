@@ -1,6 +1,6 @@
 const FitCoachContainer = () => {
   return (
-    <div className="absolute top-[3192px] left-[1px] bg-black w-[1441px] h-[405px] overflow-hidden text-left text-5xl text-white font-leading-tight-text-sm-font-normal">
+    <div className="absolute top-[3192px] bg-black w-screen h-[405px] overflow-hidden text-left text-5xl text-white font-leading-tight-text-sm-font-normal">
       <div className="absolute top-[72px] left-[calc(50%_-_600px)] w-[1200px] flex flex-row items-start justify-between">
         <div className="w-[301px] flex flex-col items-start justify-start gap-[16px]">
           <img
