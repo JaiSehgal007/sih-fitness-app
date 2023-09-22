@@ -10,11 +10,11 @@ const FitCoachContainer = () => {
           />
           <div className="flex flex-col items-start justify-start gap-[8px]">
             <div className="relative tracking-[-0.04em] leading-[150%] font-semibold">
-              FitCoach
+            FitCoach
             </div>
             <div className="relative text-base leading-[150%] inline-block w-[497.08px]">
               FitCoach is an AI-powered fitness app that provides personalized
-              training regimes, expert guidance, and real-time feedback to help
+              training regimes, expert guidance, real-time feedback and competitiveness to help
               users achieve their fitness goals.
             </div>
           </div>
