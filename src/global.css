@@ -5,7 +5,6 @@
 @tailwind utilities;
 body {
   @apply leading-[normal] m-0;
-  background: black;
 }
 *,
 ::before,

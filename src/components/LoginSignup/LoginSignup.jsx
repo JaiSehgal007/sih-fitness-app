@@ -10,7 +10,7 @@ const LoginSignup = () => {
   const[action,setAction] = useState("Login");
 
   return (
-    <div>
+    <div className='bg'>
       <div className='container'>
         <div className="header">
             <div className="text">{action}</div>
