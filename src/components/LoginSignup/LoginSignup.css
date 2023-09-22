@@ -65,6 +65,11 @@ body{
     border-left: 1px solid rgb(190,190,190);
 }
 
+.input:hover{
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+
 .input img{
     margin: 0px 30px;
 }
@@ -117,4 +122,14 @@ body{
 .gray{
     background: white;
     color: gray;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
