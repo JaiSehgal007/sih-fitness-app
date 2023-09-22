@@ -41,7 +41,7 @@ const ButtonSecondary = ({
         className="absolute w-[calc(100%_-_33px)] top-[calc(50%_-_12px)] left-[17px] leading-[134.77%] flex items-center justify-center"
         style={textStyle}
       >
-        {text}
+        <a href="/login" style={{textDecoration: 'none', color: 'white'}}>{text}</a>
       </div>
     </div>
   );
