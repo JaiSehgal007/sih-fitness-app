@@ -11,7 +11,7 @@ const LoginSignup = () => {
 
   return (
     <div className='bg'>
-      <div className='container'>
+      <div className='login-container'>
         <div className="header">
             <div className="text">{action}</div>
             <div className="underline"></div>

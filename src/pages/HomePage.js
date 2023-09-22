@@ -18,7 +18,7 @@ const HomePage = () => {
           <div className="absolute top-[0px] left-[0px] tracking-[-0.02em] leading-[110%] inline-block w-[1208px]">
             <b>{`Personalized `}</b>
             <span className="font-extralight">
-              coaching re-imagined with AI
+              training re-imagined with AI
             </span>
           </div>
         </div>
@@ -34,7 +34,7 @@ const HomePage = () => {
             src="/fire.svg"
           />
           <div className="relative leading-[150%] font-medium">
-            <Link to={"/main"}>
+            <Link to={"/main"} style={{textDecoration: 'none', color: 'black'}}>
             Let’s Explore
 
             </Link>
