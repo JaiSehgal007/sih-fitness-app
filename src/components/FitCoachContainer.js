@@ -1,6 +1,6 @@
 const FitCoachContainer = () => {
   return (
-    <div className="absolute top-[3192px] left-[1px] bg-black w-[1441px] h-[405px] overflow-hidden text-left text-5xl text-white font-leading-tight-text-sm-font-normal">
+    <div className="absolute top-[3192px] left bg-black w-[1441px] h-[405px] overflow-hidden text-left text-5xl text-white font-leading-tight-text-sm-font-normal">
       <div className="absolute top-[72px] left-[calc(50%_-_600px)] w-[1200px] flex flex-row items-start justify-between">
         <div className="w-[301px] flex flex-col items-start justify-start gap-[16px]">
           <img
@@ -10,11 +10,11 @@ const FitCoachContainer = () => {
           />
           <div className="flex flex-col items-start justify-start gap-[8px]">
             <div className="relative tracking-[-0.04em] leading-[150%] font-semibold">
-              FitCoach
+            FitCoach
             </div>
             <div className="relative text-base leading-[150%] inline-block w-[497.08px]">
               FitCoach is an AI-powered fitness app that provides personalized
-              training regimes, expert guidance, and real-time feedback to help
+              training regimes, expert guidance, real-time feedback and competitiveness to help
               users achieve their fitness goals.
             </div>
           </div>

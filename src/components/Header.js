@@ -12,32 +12,23 @@ const Header = () => {
               src="/dumbbell.svg"
             />
             <div className="relative tracking-[-0.04em] leading-[150%] font-semibold">
-              FitCoach
+              <a href="/" style={{textDecoration: 'none', color: 'white'}}>FitCoach</a>
             </div>
           </div>
         </div>
         <div className="flex flex-row items-start justify-center gap-[32px] text-center text-sm text-white">
-          <div className="flex flex-row items-center justify-start">
-            <div className="relative leading-[150%]">Services</div>
+          <div className="flex flex-col items-start justify-center">
+            <div className="relative leading-[150%]"><a href="#features" style={{textDecoration: 'none', color: 'white', fontSize: 18, margin:21}}>Features</a></div>
           </div>
           <div className="flex flex-col items-start justify-center">
-            <div className="relative leading-[150%]">Industries</div>
+            <div className="relative leading-[150%]"><a href="#tools" style={{textDecoration: 'none', color: 'white', fontSize: 18, margin:21}}>Technologies</a></div>
           </div>
           <div className="flex flex-col items-start justify-center">
-            <div className="relative leading-[150%]">Insights</div>
-          </div>
-          <div className="flex flex-col items-start justify-center">
-            <div className="relative leading-[150%]">Company</div>
-          </div>
-          <div className="flex flex-col items-start justify-center">
-            <div className="relative leading-[150%]">Careers</div>
-          </div>
-          <div className="flex flex-col items-start justify-center">
-            <div className="relative leading-[150%]">Contact</div>
+            <div className="relative leading-[150%]"><a href="#dev" style={{textDecoration: 'none', color: 'white', fontSize: 18, margin:21}}>Contact</a></div>
           </div>
         </div>
         <ButtonSecondary
-          text="Sign Up"
+          text="Sign In"
           buttonSecondaryWidth="140px"
           buttonSecondaryHeight="40px"
           buttonSecondaryPosition="relative"
