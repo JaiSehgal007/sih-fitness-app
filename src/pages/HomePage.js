@@ -2,10 +2,11 @@ import Header from "../components/Header";
 import ToolAndTechStackForm from "../components/ToolAndTechStackForm";
 import DeveloperCard from "../components/DeveloperCard";
 import FitCoachContainer from "../components/FitCoachContainer";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div className="relative bg-black w-[1441px] h-[1284px] text-center text-[14.34px] text-white font-leading-tight-text-sm-font-normal">
+    <div className="relative bg-black w-screen h-[1284px] text-center text-[14.34px] text-white font-leading-tight-text-sm-font-normal">
       <div className="absolute top-[calc(50%_-_578px)] left-[calc(50%_-_608.5px)] h-[1284px] flex flex-col items-center justify-center gap-[34.42px]">
         <div className="rounded-[71.7px] overflow-hidden flex flex-row py-[7.170467853546143px] px-[14.340935707092285px] items-start justify-start border-[0.7px] border-solid border-white">
           <div className="relative leading-[150%] uppercase">
@@ -33,7 +34,10 @@ const HomePage = () => {
             src="/fire.svg"
           />
           <div className="relative leading-[150%] font-medium">
+            <Link to={"/main"}>
             Let’s Explore
+
+            </Link>
           </div>
           <img
             className="relative w-[28.68px] h-[28.68px] overflow-hidden shrink-0 hidden"

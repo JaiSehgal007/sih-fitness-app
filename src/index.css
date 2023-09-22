@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: white;
+}
+
+/* css - navbar */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 1rem 1rem; */
+  padding: 0.6rem 1.23656rem;
+  /* border-bottom: 1px solid #FFF; */
+  border-bottom: 0.989px solid rgba(255, 255, 255, 0.20);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.49463rem;
+ 
+  /* display: flex;
+  align-items: center;
+  gap: 7px; */
+}
+
+.logo {
+  width: 2.54569rem;
+  height: 2.54569rem;
+}
+
+.nav-logo span {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.48388rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 2.22581rem */
+  letter-spacing: -0.05938rem;
+}
+
+.notificationBell {
+  width: 2.34944rem;
+  height: 2.34944rem;
+}
+
+.profile {
+  width: 3.21506rem;
+  height: 3.21506rem;
+}
+
+.nav-options {
+  /* display: flex;
+  align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.98925rem;
+}
+
+.nav-button {
+  width: 4rem;
+  border: 1px solid black;
+}
+
+/* 
+* CSS
+* CARDS
+*/
+
+/* below are stylings of profile card */
+
+.profileComponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  /* flex-wrap: wrap; */
+
+  margin: 2.62rem 1rem;
+}
+
+.profileCard {
+  border-radius: 0.70288rem;
+  background: #2D2D2D;
+  padding: 1.5rem 0.6875rem;
+  box-shadow: 0px 2.58958px 16.1849px 0px rgba(0, 0, 0, 0.25);
+
+  gap: 1.3rem;
+
+  display: flex;
+  padding: 1.5rem 1.4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 25rem; */
+}
+
+.profileCardText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.profileCardImage { 
+  width: 8.33488rem;
+  height: 8.33488rem;
+}
+
+.profileName {
+  color: #E2E2E2;
+  font-family: Inter;
+  font-size: 4.44525rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 5.33431rem */
+  letter-spacing: -0.08888rem;
+}
+
+.profileUpdate {
+  color: #ABA9A9;
+font-family: Inter;
+font-size: 1.28325rem;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 1.53994rem */
+letter-spacing: -0.02569rem
+}
+
+.profileInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6875rem;
+}
+
+.exerciseCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1.5625rem;
+  background: #000;
+
+  padding: 0.5rem 1.5rem;
+}
+
+.exerciseDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.exerciseCTA {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.dumbellImg3d {
+  width: 0.75688rem;
+  height: 0.82831rem;
+}
+
+.startWorkout {
+  display: flex;
+  padding: 0.70725rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.31081rem;
+  flex-shrink: 0;
+
+  border-radius: 1.17875rem;
+  background: #FFF;
+}
+
+.startWorkout span {
+  color: #000;
+  font-family: Inter;
+  font-size: 0.81069rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 0.97281rem */
+  letter-spacing: -0.01619rem;
+}
+
+.gymDay {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.90425rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 2.28506rem */
+  letter-spacing: -0.03806rem;
+}
+
+/* activity card */
+
+.activityCard {
+  border-radius: 0.70288rem;
+  background: #2D2D2D;
+  padding: 1.5rem 0.6875rem;
+  box-shadow: 0px 2.58958px 16.1849px 0px rgba(0, 0, 0, 0.25);
+
+  gap: 1.3rem;
+
+  display: flex;
+  padding: 1.5rem 1.4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 20rem;
+}
+
+.activityInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.activityHeading {
+  font-family: Inter;
+  font-size: 1.30538rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+/* level card */
+
+.levelInfoCard {
+  /* height: 7rem; */
+  background-color: #2D2D2D;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* gap: 3rem; */
+
+  border-radius: 0.70288rem;
+  background: #2D2D2D;
+  padding: 1.5rem 0.6875rem;
+  box-shadow: 0px 2.58958px 16.1849px 0px rgba(0, 0, 0, 0.25);
+}
+
+.levelAndBadges {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-left: -2rem;
+}
+
+.avatarInfo {
+  display: flex;
+  margin-left: -1rem;
+}
+
+.avatarImage {
+  height: 18rem;
+}
+
+.levelDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.levelDetails span {
+  font-weight: 600;
+  font-size: 2rem;
+  /* margin-top: -0.5rem; */
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: centers;
+  border-top: 1px solid rgba(255, 255, 255, 0.346);
+  padding: 0.5rem ;
+}
+
+.levelImg {
+  height: 7.2rem;
+}
+
+.badgeImg {
+  height: 6rem;
+}
+
+/* Routines.jsx */
+
+.routinesOuter {
+  display: flex;
+  width: 88.9375rem;
+  height: 25.3125rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+.routines {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 2.0625rem;
+  flex-wrap: wrap;
+  padding: 0.625rem 0.625rem 0.625rem 2.6875rem;
+}
+
+.routinesText {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 2.7rem */
+  letter-spacing: -0.045rem;
+}
+
+/* Calendar.jsx */
+
+.calendar {
+  background-color: #2D2D2D;
+  display: flex;
+  padding: 1.7665rem;
+  flex-direction: column;
+  width: 50%;
+  gap: 2rem;
+  border-radius: 0.778rem;
+  background: #1E1E1E;
+}
+
+.calendarHeatMap {
+  /* width: 100%; */
+  /* height: 8rem; */
+}
+
+.calendarText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendarHeading {
+  font-size: 1.167rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.96431rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.75rem; 
+}
+
+.thisYear {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.467rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 1.40038rem */
+}
+
+.react-calendar-heatmap .color-less-than-500 {
+  fill: #FFc8c8;
+}
+
+.react-calendar-heatmap .color-less-than-1000 {
+  fill: #ff6c6c;
+}
+
+.react-calendar-heatmap .color-less-than-1500 {
+  fill: #fb2424;
+}
+
+.react-calendar-heatmap .color-less-than-2000 {
+  fill: #B20808;
+}
+
+.react-calendar-heatmap .color-zero {
+  fill: #b4b4b4;
+}
+
+.react-calendar-heatmap .color-empty {
+  fill: #000000;
+}
+
+/* History.jsx */
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* margin: 4rem; */
+  border-radius: 1.0815rem;
+  background: #1E1E1E;
+  padding: 2rem 2rem;
+  width: 50%;
+}
+
+.historyIntro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+}
+
+.historyHeading {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.96431rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.75rem; 
+}
+
+.viewAll {
+  border-radius: 0.6875rem;
+  border: 0.629px solid rgba(255, 255, 255, 0.10);
+  background: rgba(13, 13, 13, 0.22);
+  display: flex;
+  padding: 0.19644rem 0.98213rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.98213rem;
+  color: rgba(255, 255, 255, 0.40);
+  text-align: center;
+  font-family: Inter;
+  font-size: 0.98213rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.16069rem;
+  width: 5rem;
+}
+
+.historyTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.historyItem {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.47px solid rgba(255, 255, 255, 0.10) ;
+}
+
+.historyItem:last-of-type {
+  border: none;
+}
+
+.historyExercise {
+  color: #AAA;
+  font-family: Inter;
+  font-size: 1.17856rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.77694rem; /* 235.621% */
+}
+
+.historyCalories {
+  color: #A13951;
+  font-family: Inter;
+  font-size: 1.17856rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.20513rem; 
+}
+
+.historyTime {
+  color: #AAA;
+  text-align: right;
+  font-family: Inter;
+  font-size: 1.17856rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.20513rem;
+}
+
+/* Aligning history & Calendar */
+
+.historyAndCalendar {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 3.25rem 1.25rem 2rem;
+}
