@@ -8,12 +8,12 @@ const DeveloperCard = () => {
           <b className="relative tracking-[-0.03em] leading-[110%]">
             Developers
           </b>
-          <div className="relative text-[21px] leading-[150%] inline-block w-[561.59px]">
+          <div className="relative text-[25px] m-5 leading-[150%] inline-block w-[561.59px]">
             Meet our stellar software squad!
           </div>
         </div>
       </div>
-      <div className="w-[1091px] h-[257px] flex flex-row flex-wrap items-center justify-between text-[31.74px]">
+      <div className="w-[1091px] h-[257px] m-8 flex flex-row flex-wrap items-center justify-between text-[31.74px]">
         <ContainerCardForm productDimensions="/vector.svg" name="Sushmit" />
         <ContainerCardForm productDimensions="/vector1.svg" name="Shubham" />
         <ContainerCardForm productDimensions="/vector2.svg" name="Ranjan" />

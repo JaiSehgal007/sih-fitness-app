@@ -1,8 +1,8 @@
 const ContainerCardForm = ({ productDimensions, name }) => {
   return (
-    <div className="relative w-[117.69px] h-[199.01px] text-center text-[31.74px] text-white font-leading-tight-text-sm-font-normal">
+    <div className="relative w-[117.69px] h-[231.01px] text-center text-[31.74px] text-white font-leading-tight-text-sm-font-normal">
       <div className="absolute top-[0px] left-[0px] rounded-[50%] bg-gainsboro w-[117.69px] h-[117.69px]" />
-      <div className="absolute top-[130.25px] left-[11.24px] tracking-[-0.03em] inline-block w-[95.21px] h-[30.41px]">
+      <div className="absolute top-[150.25px] left-[11.24px] tracking-[-0.03em] inline-block w-[95.21px] h-[30.41px]">
         {name}
       </div>
       <img

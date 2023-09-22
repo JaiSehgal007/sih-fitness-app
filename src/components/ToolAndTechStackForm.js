@@ -1,4 +1,4 @@
-import techstack from "./techstack-modified.png"
+import techstack from "./Assets/techstack-modified.png"
 
 const ToolAndTechStackForm = () => {
   return (
