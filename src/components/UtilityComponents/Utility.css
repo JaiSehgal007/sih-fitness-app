@@ -1,0 +1,107 @@
+/* css for dropdown */
+
+.dropdown {
+  position: relative;
+    width: 8.7rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    background-color: white;
+    background: transparent;
+  }
+  
+  .dropdown-header {
+    padding:  0.65269rem 0.87025rem;;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.65269rem 0.87025rem;
+    border: 1px solid rgba(255, 255, 255, 0.421);
+  }
+  
+  .dropdown-body {
+    padding: 5px;
+    border: 1px solid #E5E8EC;
+    position: absolute;
+    margin: 0.5rem;
+    border-radius: 10px;
+    padding: 0;
+    z-index: 1000;
+    display: none; 
+  }
+  
+  .dropdown-body.open {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.321);
+  }
+
+  .dropdown-item:last-child {
+    border-radius: 0 0 10px 10px;
+    border: none;
+  }
+
+  .dropdown-item:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .dropdown-item:hover {
+    cursor: pointer;
+    background-color: black;
+  }
+  
+  .dropdown-item-dot {
+    opacity: 0;
+    color: #91A5BE;
+    transition: all .2s ease-in-out;
+  }
+  
+  .dropdown-item-dot.selected {
+    opacity: 1;
+  }
+
+  /* donut chart */
+
+  .chart-container {
+    height: 14.2rem;
+  }
+
+  /* Cards */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.cardLabel {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.cardImg {
+  flex-shrink: 0;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

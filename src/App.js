@@ -7,6 +7,7 @@ import {
 import HomePage from "./pages/HomePage";
 import { useEffect } from "react";
 import LoginSignup from "./components/LoginSignup/LoginSignup";
+import Main from "./Main";
 
 function App() {
   const action = useNavigationType();
@@ -48,6 +49,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginSignup />} />
+      <Route path="/main" element={<Main />} />
     </Routes>
   );
 }
