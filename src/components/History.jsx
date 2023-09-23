@@ -1,3 +1,5 @@
+// import { useState, useEffect } from 'react'
+
 const data = [
     {
         exercise: "11 pushups",
@@ -21,7 +23,33 @@ const data = [
     }
 ]
 
+
+
 const History = () => {
+
+    // const [data, setData] = React.useState(dataArray)
+    
+    // useEffect(() => {
+
+    //     axios.get(apiUrl, {
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //       })
+    //         .then((response) => {
+    //           // Handle the response data here
+    //           console.log('Daily Stats:', response.data.dailyStats);
+    //         })
+    //         .catch((error) => {
+    //           // Handle any errors that occurred during the request
+    //           console.error('Error:', error);
+    //         });
+
+    //     // return () => {
+    //     //     cleanup
+    //     // };
+    // }, []);
+
   return (
     <div className='history'>
         <div className='historyIntro'>

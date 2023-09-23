@@ -12,7 +12,7 @@ const data = {
             backgroundColor: ['#434343' , '#A13951'],
             borderWidth: 1,
             hoverBorderWidth: 2,
-            pointBackgroundColor: 'rgba(255,206,86,0.2)'
+            pointBackgroundColor: '#000000'
         }
     ]
 }
@@ -37,9 +37,9 @@ const options = {
 
 const DonutChart = () => {
     return(
-        <div className="chart-container">
-        <Doughnut data={data} options={options}/>
-    </div>
+      <div className="chart-container">
+          <Doughnut data={data} options={options}/>
+      </div>
     )
 }
 

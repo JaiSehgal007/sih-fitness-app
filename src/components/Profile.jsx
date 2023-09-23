@@ -9,7 +9,8 @@ import '../index.css'
 import profile from '../assets/profile.png'
 
 export const Profile = () => {
-    const currentUser = {email : "shyam@imaginary.ioata" };
+    const currentUser = JSON.parse(localStorage.getItem('auth'))
+    // const currentUser = {email : "shyam@imaginary.ioata" };
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const navigate = useNavigate();
@@ -46,7 +47,19 @@ export const Profile = () => {
            <div className='profileText'>
 
                 <div className='profileEmail'>
-                    <strong>Email:</strong> {currentUser.email}
+                    <strong>Name:</strong> {currentUser.user.name}
+                </div>
+
+                <div className='profileEmail'>
+                    <strong>Email:</strong> {currentUser.user.email}
+                </div>
+
+                <div className='profileEmail'>
+                    <strong>Age:</strong> {currentUser.user.age}
+                </div>
+
+                <div className='profileEmail'>
+                    <strong>Gender:</strong> {currentUser.user.gender}
                 </div>
 
                 <div>

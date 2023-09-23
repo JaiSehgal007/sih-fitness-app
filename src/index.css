@@ -136,12 +136,13 @@ a {
 
 .profileUpdate {
   color: #ABA9A9;
-font-family: Inter;
-font-size: 1.28325rem;
-font-style: normal;
-font-weight: 500;
-line-height: 120%; /* 1.53994rem */
-letter-spacing: -0.02569rem
+  font-family: Inter;
+  font-size: 1.28325rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 1.53994rem */
+  letter-spacing: -0.02569rem;
+  cursor: pointer;
 }
 
 .profileInfo {

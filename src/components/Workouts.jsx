@@ -7,42 +7,50 @@ import pushups from '../assets/workouts/pushups.png'
 const Workouts = () => {
     const data = [
         {
+          label: "Bicep Curls",
+          url: "https://i.ytimg.com/vi/in7PaeYlhrM/maxresdefault.jpg",
+          link: '/train/bicepCurls'
+        },
+        {
           label: "Push Ups",
-          url: pushups
+          url: pushups,
+          link: '/main'
         },
         {
           label: "Lunges",
-          url: lunges
+          url: lunges,
+          link: '/main'
         },
         {
           label: "Sit Ups",
-          url: situps
+          url: situps,
+          link: '/main'
         },
         {
             label: "Crunches",
-            url: crunches
-        },
-        {
-            label: "Push Ups",
-            url: pushups
+            url: crunches,
+            link: '/main'
         },
         {
             label: "Lunges",
-            url: lunges
+            url: lunges,
+            link: '/main'
         },
         {
             label: "Sit Ups",
-            url: situps
+            url: situps,
+            link: '/main'
         },
         {
           label: "Crunches",
-          url: crunches
+          url: crunches,
+          link: '/main'
         }
       ];
   return (
     <div className='routines'>
         <div className='routinesText'>Explore More Workouts</div>
-        <Cards data={data} />
+          <Cards data={data} />
     </div>
   )
 }
