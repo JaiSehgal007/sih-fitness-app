@@ -72,7 +72,7 @@ const HomePage = () => {
           <div className="flex flex-row items-start justify-start gap-[79.36px] text-left text-[31.74px]">
             <div className="h-[177.23px] flex flex-col items-start justify-between">
               <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="relative rounded-[264.52px] bg-247 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
                     24/7
@@ -83,7 +83,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="relative rounded-[264.52px] bg-chatbot w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
                     FitBot
@@ -96,7 +96,7 @@ const HomePage = () => {
             </div>
             <div className="h-[177.23px] flex flex-col items-start justify-between">
               <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="relative rounded-[264.52px] bg-accurate w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
                     Accurate
@@ -107,7 +107,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="relative rounded-[264.52px] bg-game w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
                     Gamification
@@ -120,7 +120,7 @@ const HomePage = () => {
             </div>
             <div className="h-[177.23px] flex flex-col items-start justify-between">
               <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="relative rounded-[264.52px] bg-yoga w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
                     Yoga
@@ -131,7 +131,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="relative rounded-[264.52px] bg-cam w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
                     Compatibility

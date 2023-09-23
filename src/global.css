@@ -11,3 +11,52 @@ body {
 ::after {
   border-width: 0;
 }
+
+.bg-hello{
+  background-color: black;
+}
+
+.bg-247{
+  background: url("components/Assets/247.png");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-accurate{
+  background: url("components/Assets/accuracy.jpg");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-yoga{
+  background: url("components/Assets/yoga.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-chatbot{
+  background: url("components/Assets/chatbot.jpg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+
+.bg-game{
+  background: url("components/Assets/game.jpg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+
+.bg-cam{
+  background: url("components/Assets/cam.jpg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
