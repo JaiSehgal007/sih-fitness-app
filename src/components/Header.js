@@ -1,6 +1,18 @@
 import ButtonSecondary from "./ButtonSecondary";
-
+import {useAuth} from '../context/AuthContext';
+import { useParams } from "react-router-dom";
+function geAuth(){
+  const data=localStorage.getItem('auth')
+  if(data)
+  {
+    const parseData=JSON.parse(data)
+    return parseData;
+  }
+  return null;
+}
 const Header = () => {
+  const auth = geAuth();
+  console.log("use auth",auth);
   return (
     <div className="absolute top-[0px] left-[calc(50%_-_599.5px)] box-border w-[1200px] flex flex-col py-6 px-0 items-start justify-start text-left text-sm text-gray-400 font-leading-tight-text-sm-font-normal border-b-[1px] border-solid border-gray1-100">
       <div className="self-stretch flex flex-row items-center justify-between z-[0] text-5xl text-snow-100">
@@ -28,7 +40,7 @@ const Header = () => {
           </div>
         </div>
         <ButtonSecondary
-          text="Sign In"
+          isLogin={!!auth}
           buttonSecondaryWidth="140px"
           buttonSecondaryHeight="40px"
           buttonSecondaryPosition="relative"

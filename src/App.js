@@ -17,10 +17,12 @@ import Combat from "./Combat";
 import { Profile } from "./components/Profile";
 import PageNotFound from "./components/PageNotFound";
 import UpdateProfile from "./components/UpdateProfile";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import PrivateRoute from "./PrivateRoutes";
 
 function App() {
+  const [auth, setAuth] = useAuth();
+  console.log(" user auth", auth);
   const action = useNavigationType();
   const location = useLocation();
   const pathname = location.pathname;
@@ -65,7 +67,7 @@ function App() {
                 <Route exact path="/update-profile" element={<UpdateProfile />} />
             {/* </Route> */}
 
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage auth={auth} />}  />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<PageNotFound />} />
