@@ -7,7 +7,9 @@ const Cards = ({ data }) => {
   return (
     <div className="container flex-row wrap">
       {data.map((item, index) => (
-         <Link to={item.link}>
+         <Link 
+         className="text-white active:text-white"
+         to={item.link}>
           <div key={index} className="card">
           <div
             className="cardImg"
