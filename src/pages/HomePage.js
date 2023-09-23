@@ -3,8 +3,18 @@ import ToolAndTechStackForm from "../components/ToolAndTechStackForm";
 import DeveloperCard from "../components/DeveloperCard";
 import FitCoachContainer from "../components/FitCoachContainer";
 import { Link } from "react-router-dom";
-
+function geAuth(){
+  const data=localStorage.getItem('auth')
+  if(data)
+  {
+    const parseData=JSON.parse(data)
+    return parseData;
+  }
+  return null;
+}
 const HomePage = () => {
+  const auth = geAuth();
+  console.log("explore auth ",auth)
   return (
     <div className="relative bg-black w-screen h-[1284px] text-center text-[14.34px] text-white font-leading-tight-text-sm-font-normal">
       <div className="absolute top-[calc(50%_-_578px)] left-[calc(50%_-_608.5px)] h-[1284px] flex flex-col items-center justify-center gap-[34.42px]">
@@ -34,7 +44,9 @@ const HomePage = () => {
             src="/fire.svg"
           />
           <div className="relative leading-[150%] font-medium">
-            <Link to={"/main"} style={{textDecoration: 'none', color: 'black'}}>
+            <Link to={!auth ? "/login" : "/main"} 
+            
+            style={{textDecoration: 'none', color: 'black'}}>
             Let’s Explore
 
             </Link>

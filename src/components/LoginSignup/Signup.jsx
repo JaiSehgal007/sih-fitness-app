@@ -26,6 +26,7 @@ const Signup = () => {
   const registerUser = async (userData) => {
     try {
       const response = await axios.post('https://sih-fitness-app-api.onrender.com/api/v1/auth/register', userData);
+      if(!response.ok) throw new Error("Something went wrong while registrering")
       return response.data;
     } catch (error) {
       console.error('Error registering user:', error);
@@ -47,10 +48,11 @@ const Signup = () => {
 
     registerUser(newUser)
       .then((data) => {
-        console.log(data);
+        console.log("sign up data",data);
+        navigate('/login');
       })
       .catch((error) => {
-        console.error(error);
+        console.error(error); 
       });
 
   }

@@ -79,8 +79,8 @@ const Login = () => {
 
       <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="submit-container">
-            <div className="submit" onClick={handleSubmit}>Sign Up</div>
-            <div className="submit gray" onClick={handleSwitch}>Login</div>
+            <div className="submit" onClick={handleSwitch}>Sign Up</div>
+            <div className="submit gray" onClick={handleSubmit}>Login</div>
           </div>
         </div>
       </div>

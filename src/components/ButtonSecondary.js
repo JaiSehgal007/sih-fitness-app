@@ -54,7 +54,7 @@ const ButtonSecondary = ({
         style={textStyle}
       >
 
-        <a onClick={onClick} style={{textDecoration: 'none', color: 'white'}}>
+        <a onClick={onClick} style={{textDecoration: 'none', color: 'white'}} className="hover:cursor-pointer">
           {isLogin ? "Logout" : "Login"}
         </a>
       </div>

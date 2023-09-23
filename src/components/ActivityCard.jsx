@@ -34,10 +34,11 @@ const ActivityCard = () => {
                 <SelectDropDown />
         </div>
 
-        <div >
+        <div 
+        >
                 {/* <DonutChart /> */}
                 {
-                  levels ? levels.map((level) => {
+                  levels.length ? levels.map((level) => {
                     return (
                        <div>
                        <p> {level.muscle_id.name} : {level.value}</p>
@@ -45,7 +46,9 @@ const ActivityCard = () => {
                     )
                   })
                   : 
-                  <div>
+                  <div
+                  className='p-11'
+                  >
                     <p> Fetching Statistics...</p>
                   </div>
                 }

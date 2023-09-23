@@ -121,6 +121,9 @@ function TrainGround() {
   let camera = null;
   const countTextbox = useRef(null);
   const [auth, setAuth] = useAuth();
+  if(!auth) {
+    return <p> No user found </p>;
+  }
   // recieve on feedback event after 500ms
   // if finished excercise close camera and medapipe
   useEffect(() => {
@@ -255,7 +258,7 @@ function TrainGround() {
   return (
     <div className="flex flex-col justify-center items-center ">
       <header className="flex flex-row justify-around w-full gap-2 m-4" >
-      <Link to="/main">
+      <a href="/main">
         <button 
         className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mx-10"
         >
@@ -275,7 +278,7 @@ function TrainGround() {
           </svg>
           Leave
         </button>
-      </Link>
+      </a>
 
       <div className="flex flex-col justify-center w-full text-center">
         <h1 className=" text-31xl"> Training Ground 
