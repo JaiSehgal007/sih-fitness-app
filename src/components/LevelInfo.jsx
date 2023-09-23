@@ -21,7 +21,7 @@ const LevelInfo = () => {
                     <img src={level} alt='medal-img' className='levelImg'/>
                 </div>
                 <span>
-                    Level 11
+                    Level 1
                 </span>
             </div>
 

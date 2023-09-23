@@ -5,6 +5,7 @@ import Webcam from "react-webcam";
 import { useRef, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import socketIO from "socket.io-client";
+import { useAuth } from "../context/AuthContext";
 const API = "http://localhost:3001";
 
 function angleBetweenThreePoints(pos) {
@@ -119,6 +120,7 @@ function TrainGround() {
   const { exercise } = useParams();
   let camera = null;
   const countTextbox = useRef(null);
+  const [auth, setAuth] = useAuth();
   // recieve on feedback event after 500ms
   // if finished excercise close camera and medapipe
   useEffect(() => {
@@ -133,7 +135,7 @@ function TrainGround() {
     window.location.href = "/main";
   }, [isFinished]);
   const dummyObject = {
-    userId: "650e4912b33d630700b9a225",
+    userId: auth.user.id,
     eId: "650e4bea318fe44f3a3c0d14",
   };
   function onResult(results) {
