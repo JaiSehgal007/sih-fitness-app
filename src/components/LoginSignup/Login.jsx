@@ -46,8 +46,8 @@ const Login = () => {
         navigate('/signup');
     }
   return (
-    <div className="bg">
-    <div className="container">
+    <div style={{height:'100vh'}} className="bg">
+    <div style={{ display: 'block' }} className="container">
       <div className="header">
         <div className="text">Log in</div>
         <div className="underline"></div>
@@ -76,11 +76,12 @@ const Login = () => {
 
       <div className="forgot-password">Forgot Password? <span>&nbsp;Click Here!</span></div>
 
-      <div className="submit-container">
-        <div className="submit" onClick={handleSubmit}>Login</div>
-
-        <div className="submit gray" onClick={handleSwitch} >Signup</div>
-      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="submit-container">
+            <div className="submit" onClick={handleSubmit}>Sign Up</div>
+            <div className="submit gray" onClick={handleSwitch}>Login</div>
+          </div>
+        </div>
       </div>
     </div>
   )
