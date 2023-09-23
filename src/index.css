@@ -12,6 +12,10 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* css - navbar */
 .navbar {
   display: flex;
@@ -27,6 +31,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.49463rem;
+  cursor: pointer;
  
   /* display: flex;
   align-items: center;
@@ -68,8 +73,10 @@ body {
 }
 
 .nav-button {
-  width: 4rem;
-  border: 1px solid black;
+  width: 8rem;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 
 /* 
@@ -84,7 +91,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.875rem;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 
   margin: 2.62rem 1rem;
 }
@@ -511,6 +518,187 @@ letter-spacing: -0.02569rem
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  /* flex-wrap: wrap; */
   gap: 3rem;
   margin: 3.25rem 1.25rem 2rem;
+}
+
+.pageUnderConstruction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageUnderConstructionPage {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.pageUnderConstructionHeading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 7rem;
+}
+
+/* Profile */
+
+.profileContainerOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #2D2D2D;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+}
+
+.profileHeading {
+  font-size: 4rem;
+}
+
+.updateProfileButton {
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profilePageLogOut {
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  width: 8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.headToHome {
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  width: 12rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profileImg {
+  margin: 2rem;
+  height: 10rem;
+}
+
+.profileEmail {
+    font-size: 1.5rem;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* page Not found text */
+.pageNotFound {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.pageNotFoundText {
+  font-size: 3rem;
+  color: white;
+}
+
+.errorGif {
+  margin: 2rem;
+  height: 50%;
+  border-radius: 2rem;
+}
+
+/* update profile Image */
+.updateProfilePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.updateProfileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1E1E1E;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+}
+
+.updateProfileImg {
+  height: 10rem;
+}
+
+.updateProfileHeading {
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+}
+
+.danger {
+  color: #ff5e5e;
+}
+
+.updateProfileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formInput {
+  padding: 0.7rem;
+  border-radius: 8px;
+}
+
+.formLabel {
+  font-weight: 600;
+}
+
+#formSubmit {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
 }
