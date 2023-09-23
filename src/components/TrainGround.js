@@ -4,15 +4,13 @@ import * as cam from "@mediapipe/camera_utils";
 import Webcam from "react-webcam";
 import { useRef, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import socketIO from 'socket.io-client';
-const API = "http://localhost:3001"
+import socketIO from "socket.io-client";
+const API = "http://localhost:3001";
 
 function angleBetweenThreePoints(pos) {
-  
   var a = Math.pow(pos[1].x - pos[0].x, 2) + Math.pow(pos[1].y - pos[0].y, 2);
   var b = Math.pow(pos[1].x - pos[2].x, 2) + Math.pow(pos[1].y - pos[2].y, 2);
   var c = Math.pow(pos[2].x - pos[0].x, 2) + Math.pow(pos[2].y - pos[0].y, 2);
-
 
   //angle in degrees
   var resultDegree =
@@ -51,14 +49,26 @@ const styles = {
     right: 0,
     top: 200,
     textAlign: "center",
-    width: 400,
-    color: "#b3a69f",
-    background: "#1f2838",
+    color: "#f6ea98",
+    background:  "#e26972",
+
+  },
+  insBox: {
+    position: "absolute",
+    marginRight: "auto",
+    marginLeft: "auto",
+    left: 900,
+    right: 0,
+    top: 500,
+    textAlign: "center",
+    color: "#f6ea98",
+    background:  "#e26972",
+
   },
   back: {
     position: "fixed",
     bottom: 0,
-    right: 0
+    right: 0,
   },
 };
 
@@ -84,9 +94,17 @@ const exrInfo = {
     ll: 50,
   },
 };
-
+const exerciseInstructions = {
+  bicepCurls: {
+    title: "Bicep Curls",
+    instructions: [
+      "Stand with your feet hip-width apart, holding a dumbbell in each hand with your arms at your sides and your palms facing forward.",
+      "Keeping your elbows close to your sides, slowly curl both weights toward your shoulders.",
+      "Pause, then slowly lower the weights back to the starting position.",
+    ],
+  }
+}
 function TrainGround() {
-  
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   let socket;
@@ -94,38 +112,38 @@ function TrainGround() {
   const [count, setCount] = React.useState(0);
   const [accuracy, setAccuracy] = React.useState(0);
   const [feedback, setFeedback] = React.useState("");
+  const [limit, setLimit] = React.useState(-1);
   const [isFinished, setIsFinished] = React.useState(false);
-  const {exercise} = useParams();
+  const { exercise } = useParams();
   let camera = null;
   const countTextbox = useRef(null);
   // recieve on feedback event after 500ms
   // if finished excercise close camera and medapipe
   useEffect(() => {
-    if(!isFinished) return;
-    if(camera){
+    if (!isFinished) return;
+    if (camera) {
       camera.close();
-       camera = null;
+      camera = null;
     }
-    if(pose) pose.close();
+    if (pose) pose.close();
     alert("Finished, Returning to dashboard");
     // disconnect
     window.location.href = "/main";
-  },
-  [
-    isFinished
-  ]);
+  }, [isFinished]);
   const dummyObject = {
     userId: "650e4912b33d630700b9a225",
-    eId: "650e4bea318fe44f3a3c0d14"
-  }
+    eId: "650e4bea318fe44f3a3c0d14",
+  };
   function onResult(results) {
     if (results.poseLandmarks) {
       const position = results.poseLandmarks;
-      socket.emit('train', 
-      JSON.stringify(dummyObject)
-      ,JSON.stringify(position));
+      socket.emit(
+        "train",
+        JSON.stringify(dummyObject),
+        JSON.stringify(position)
+      );
       // setTimeout(() => {
-        
+
       // }, 500);
       // console.log("here pos ", position)
       // set height and width of canvas
@@ -146,13 +164,11 @@ function TrainGround() {
         });
       }
 
-      
       const canvasElement = canvasRef.current;
       const canvasCtx = canvasElement.getContext("2d");
       canvasCtx.save();
 
       canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
-      
 
       for (let i = 0; i < 2; i++) {
         canvasCtx.beginPath();
@@ -175,9 +191,8 @@ function TrainGround() {
 
   useEffect(() => {
     console.log("rendered");
-    socket = socketIO.connect(`${API}/ws`,
-    );
-    socket.on('feedback', (feedback) => {
+    socket = socketIO.connect(`${API}/ws`);
+    socket.on("feedback", (feedback) => {
       // console.log("count ", state.count);
       const jsonFeedback = JSON.parse(feedback);
       // setState({
@@ -186,9 +201,9 @@ function TrainGround() {
       setCount(jsonFeedback.count);
       setAccuracy(jsonFeedback.accuracy);
       setFeedback(jsonFeedback.feedback);
-      if(jsonFeedback.finished) setIsFinished(true);
+      setLimit(jsonFeedback.limit);
+      if (jsonFeedback.finished) setIsFinished(true);
       else setIsFinished(false);
-    
     });
     pose = new Pose({
       locateFile: (file) => {
@@ -210,68 +225,108 @@ function TrainGround() {
     ) {
       camera = new cam.Camera(webcamRef.current.video, {
         onFrame: async () => {
-
-          if(webcamRef.current) await pose.send({ image: webcamRef.current.video });
+          if (webcamRef.current)
+            await pose.send({ image: webcamRef.current.video });
         },
         width: 640,
         height: 480,
       });
       camera.start();
     }
-  },[]);
- 
-
+  }, []);
   return (
-    <div>
-      <div style={styles.selectBox}>
-      {(() => {
-        if (exercise === "bicepCurls") {
-          return (
-            <h1>Bicep Curls</h1>
-          )
-        } else if (exercise === "squats") {
-          return (
-            <h1>Squats</h1>
-          )
-        } else if (exercise === "pushups") {
-          return (
-            <h1>Pushups</h1>
-          )
-        } else {
-          return (
-            <h1>Crunches</h1>
-          )
-        }
-      })()}
-        <div style={{ top: 50 }}>
-          <h1>Count</h1>
-          <input
-            variant="filled"
-            value={count}
-            textAlign="center"
-            style={{ height: 50, fontSize: 40, width: 80 }}
-          />
-          <br></br>
-          <br></br>
+    <div className="flex flex-col justify-center items-center ">
+      <header className="flex flex-row justify-around w-full gap-2 m-4" >
+      <Link to="/">
+        <button 
+        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mx-10"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#000000"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+          Leave
+        </button>
+      </Link>
 
-          <p>
-            <h1>Feedback</h1>
-            <h2>{feedback}</h2>
-          </p>
-          <p>
-            <h1>Accuracy</h1>
-            <h2>{accuracy}</h2>
-          </p>
+      <div className="flex flex-col justify-center w-full text-center">
+        <h1 className=" text-31xl"> Training Ground 
+        </h1>
+        <h2 className="text-3xl ">{exercise.toLocaleUpperCase()} 💪</h2>
+      </div>
+      </header>
+      <div>
+        <Webcam ref={webcamRef} style={styles.webcam} />
+        <canvas ref={canvasRef} style={styles.webcam} />
+        <div style={styles.back}>
+          <Link to="/">
+            <button
+              size="large"
+              variant="contained"
+              style={{ backgroundColor: "#b3a69f", fontWeight: "bold" }}
+            >
+              Back
+            </button>
+          </Link>
         </div>
       </div>
-      <Webcam ref={webcamRef} style={styles.webcam} />
-      <canvas ref={canvasRef} style={styles.webcam} />
-      <div style={styles.back}>
-        <Link to="/">
-          <button size="large" variant="contained"  style={{backgroundColor:'#b3a69f',fontWeight:'bold'}}>
-            Back
-          </button>
-        </Link>
+
+      <div style={styles.selectBox} className="p-9 w-1/3 flex gap-2 flex-col
+       space-x-4 space-y-4
+      ">
+        <div 
+        // className="flex flex-col justify-center items-center"
+        >
+        <h1
+        className="text-3xl mb-5"
+        >Your Performance </h1>
+          <h1>Reps: <span>{count}/{limit}
+          </span>
+          </h1>
+          <p>
+            <h1>Feedback: 
+              <span>{feedback || "No feedback"}</span>
+            </h1>
+          </p>
+          <p>
+            <h1>Accuracy : 
+            <span>{
+              Math.round(accuracy * 100) / 100
+            }</span>
+            </h1>
+          </p>
+        </div>
+        
+      </div>
+      <div style={styles.insBox} className="p-9 w-1/3 flex gap-2 flex-col
+       space-x-4 space-y-4
+      ">
+        <div style={{ top: 50 }} 
+        // className="flex flex-col justify-center items-center"
+        >
+          <h1>
+            Instructions
+          </h1>
+          <p>
+              {
+                exerciseInstructions[exercise].instructions.map((instruction, index) => {
+                  return <p key={index}>{instruction}</p>
+                }
+                )
+               }
+          </p>
+        </div>
+        
       </div>
     </div>
   );
