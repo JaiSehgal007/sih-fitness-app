@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const FitCoachContainer = () => {
   return (
     <div className="absolute top-[3192px] left bg-black w-screen h-[405px] overflow-hidden text-left text-5xl text-white font-leading-tight-text-sm-font-normal">
@@ -10,6 +11,7 @@ const FitCoachContainer = () => {
           />
           <div className="flex flex-col items-start justify-start gap-[8px]">
             <div className="relative tracking-[-0.04em] leading-[150%] font-semibold">
+              
             FitCoach
             </div>
             <div className="relative text-base leading-[150%] inline-block w-[497.08px]">

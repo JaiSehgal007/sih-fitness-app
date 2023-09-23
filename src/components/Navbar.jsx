@@ -2,7 +2,7 @@ import logo from '../assets/dumbell.svg'
 import notificationBell from '../assets/notificationBell.svg'
 import profile from '../assets/profile.png'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -24,7 +24,10 @@ const Navbar = () => {
                 <div>
                     <img src={logo} alt='logo' className='logo'/>
                 </div>
+                <a href="/">
                 <span>FitCoach</span>
+
+                </a>
             </div>
             
             <div className='nav-options'>
