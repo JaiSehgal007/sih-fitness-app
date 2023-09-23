@@ -11,7 +11,7 @@ const LoginSignup = () => {
 
   return (
     <div className='bg'>
-      <div className='container'>
+      <div className='login-container'>
         <div className="header">
             <div className="text">{action}</div>
             <div className="underline"></div>
@@ -20,6 +20,10 @@ const LoginSignup = () => {
             {action==="Login"?<div></div>:<div className="input">
                 <img src={user_icon} alt="" />
                 <input type="text" placeholder='Name'/>
+            </div>}
+            {action==="Login"?<div></div>:<div className="input">
+                <img src={user_icon} alt="" />
+                <input type="number" placeholder='Age'/>
             </div>}
             <div className="input">
                 <img src={email_icon} alt="" />

@@ -18,13 +18,13 @@ const HomePage = () => {
           <div className="absolute top-[0px] left-[0px] tracking-[-0.02em] leading-[110%] inline-block w-[1208px]">
             <b>{`Personalized `}</b>
             <span className="font-extralight">
-              coaching re-imagined with AI
+              training re-imagined with AI
             </span>
           </div>
         </div>
         <div className="relative text-[25.22px] leading-[150%] inline-block w-[1037.1px]">
           FitCoach is an AI-powered fitness app that provides personalized
-          training regimes, expert guidance, and real-time feedback to help
+          training regimes, expert guidance, real-time feedback and competitiveness to help
           users achieve their fitness goals.
         </div>
         <div className="rounded-[143.41px] bg-white flex flex-row py-[17.209121704101562px] px-[28.68187141418457px] items-center justify-center gap-[11.47px] text-left text-[22.95px] text-black">
@@ -34,7 +34,7 @@ const HomePage = () => {
             src="/fire.svg"
           />
           <div className="relative leading-[150%] font-medium">
-            <Link to={"/main"}>
+            <Link to={"/main"} style={{textDecoration: 'none', color: 'black'}}>
             Let’s Explore
 
             </Link>
@@ -59,19 +59,14 @@ const HomePage = () => {
         </div>
       </div>
       <Header />
-      <div className="absolute top-[1284px] left-[0px] bg-black w-[1441px] h-[629px] overflow-hidden flex flex-col py-32 px-[314px] box-border items-center justify-center text-[52.9px]">
+      <div id="features" className="absolute top-[1284px] left-[0px] bg-black w-[1441px] h-[629px] overflow-hidden flex flex-col py-32 px-[314px] box-border items-center justify-center text-[52.9px]">
         <div className="flex flex-col items-center justify-start gap-[84.65px]">
           <div className="flex flex-col items-center justify-center gap-[31.74px]">
             <b className="relative tracking-[-0.03em] leading-[110%]">
               A Complete Fitness Trainer
             </b>
             <div className="relative text-[18.52px] leading-[150%] inline-block w-[1073.23px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              convallis eu nibh id convallis. Praesent malesuada, enim id
-              feugiat posuere, nisl nisi porttitor dolor, ac convallis neque
-              enim non turpis. Praesent tempor elit sem, at tincidunt sapien
-              tristique a. Curabitur maximus lacus non euismod porta. Integer
-              quis lorem pretium, sollicitudin turpis sit amet, placerat.
+              Like having a personal virtual trainer, FitCoach provides 24/7 real-time monitoring of body postures, ensuring correct form during exercise and thus preventing injuries. FitBot AI chatbot tracks workout routines and provides personalized diet recommendations based on their age, gender and current level. FitCoach creates a motivating environment by ranking users within their age and gender category, providing a healthy competition that encourages exercise and fitness. Users receive badges, trophies, and accolades.
             </div>
           </div>
           <div className="flex flex-row items-start justify-start gap-[79.36px] text-left text-[31.74px]">
@@ -80,10 +75,10 @@ const HomePage = () => {
                 <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
-                    200+
+                    24/7
                   </div>
                   <div className="relative text-[18.52px] leading-[150%] text-gray-400">
-                    Lorem Ipsum
+                    Personal virtual trainer
                   </div>
                 </div>
               </div>
@@ -91,34 +86,10 @@ const HomePage = () => {
                 <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
-                    200+
+                    FitBot
                   </div>
                   <div className="relative text-[18.52px] leading-[150%] text-gray-400">
-                    Lorem Ipsum
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="h-[177.23px] flex flex-col items-start justify-between">
-              <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
-                <div className="flex flex-col items-start justify-start">
-                  <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
-                    200+
-                  </div>
-                  <div className="relative text-[18.52px] leading-[150%] text-gray-400">
-                    Lorem Ipsum
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-row items-center justify-start gap-[15.87px]">
-                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
-                <div className="flex flex-col items-start justify-start">
-                  <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
-                    200+
-                  </div>
-                  <div className="relative text-[18.52px] leading-[150%] text-gray-400">
-                    Lorem Ipsum
+                    Personalized diet recommendation
                   </div>
                 </div>
               </div>
@@ -128,10 +99,10 @@ const HomePage = () => {
                 <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
-                    200+
+                    Accurate
                   </div>
                   <div className="relative text-[18.52px] leading-[150%] text-gray-400">
-                    Lorem Ipsum
+                  Pose detection
                   </div>
                 </div>
               </div>
@@ -139,10 +110,34 @@ const HomePage = () => {
                 <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
                 <div className="flex flex-col items-start justify-start">
                   <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
-                    200+
+                    Gamification
                   </div>
                   <div className="relative text-[18.52px] leading-[150%] text-gray-400">
-                    Lorem Ipsum
+                    Receive badges for hitting milestones and play games
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="h-[177.23px] flex flex-col items-start justify-between">
+              <div className="flex flex-row items-center justify-start gap-[15.87px]">
+                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="flex flex-col items-start justify-start">
+                  <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
+                    Yoga
+                  </div>
+                  <div className="relative text-[18.52px] leading-[150%] text-gray-400">
+                    For mental health
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row items-center justify-start gap-[15.87px]">
+                <div className="relative rounded-[264.52px] bg-snow-200 w-[59.52px] h-[60.84px] overflow-hidden shrink-0" />
+                <div className="flex flex-col items-start justify-start">
+                  <div className="relative tracking-[-0.01em] leading-[110%] font-semibold">
+                    Compatibility
+                  </div>
+                  <div className="relative text-[18.52px] leading-[150%] text-gray-400">
+                    Any camera-equipped device
                   </div>
                 </div>
               </div>
