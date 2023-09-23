@@ -1,7 +1,12 @@
 import { useMemo } from "react";
 
+function clearAuth(){
+    localStorage.removeItem('auth');
+    window.location.reload();
+}
 const ButtonSecondary = ({
   text,
+  isLogin,
   buttonSecondaryWidth,
   buttonSecondaryHeight,
   buttonSecondaryPosition,
@@ -27,7 +32,14 @@ const ButtonSecondary = ({
       color: textColor,
     };
   }, [textColor]);
-
+  function onClick(){
+    if(isLogin){
+      clearAuth();
+    }
+    else {
+      window.location.href="/login";
+    }
+  }
   return (
     <div
       className="w-[200px] h-[60px] text-center text-lg text-black font-roboto"
@@ -41,7 +53,10 @@ const ButtonSecondary = ({
         className="absolute w-[calc(100%_-_33px)] top-[calc(50%_-_12px)] left-[17px] leading-[134.77%] flex items-center justify-center"
         style={textStyle}
       >
-        <a href="/login" style={{textDecoration: 'none', color: 'white'}}>{text}</a>
+
+        <a onClick={onClick} style={{textDecoration: 'none', color: 'white'}}>
+          {isLogin ? "Logout" : "Login"}
+        </a>
       </div>
     </div>
   );
