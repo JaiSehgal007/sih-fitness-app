@@ -19,6 +19,7 @@ import PageNotFound from "./components/PageNotFound";
 import UpdateProfile from "./components/UpdateProfile";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./PrivateRoutes";
+import TrainGround from "./components/TrainGround";
 
 function App() {
   const action = useNavigationType();
@@ -56,10 +57,10 @@ function App() {
     }
   }, [pathname]);
   return (
-        <Routes>
-           {/* <AuthProvider> */}
+    <Routes>
+    {/* <AuthProvider> */}
             {/* <Route element={ <PrivateRoute/> }> */}
-                <Route exact path="/combat" element={<Combat />} />
+            <Route exact path="/combat" element={<Combat />} />
                 <Route exact path="/main" element={<Main />} />
                 <Route exact path="/profile" element={<Profile />} />
                 <Route exact path="/update-profile" element={<UpdateProfile />} />
@@ -69,8 +70,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<PageNotFound />} />
-            {/* </AuthProvider> */}
-        </Routes>
+      <Route path="/train/:exercise" element={<TrainGround />} />
+
+    </Routes>
   );
 }
 export default App;
