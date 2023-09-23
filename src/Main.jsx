@@ -13,8 +13,8 @@ function Main() {
     <>
       <Navbar />
       <ProfileComponent />
-      <Routines />
       <Workouts />
+      <Routines />
       <div className='historyAndCalendar'>
         <Calendar />
         <History />

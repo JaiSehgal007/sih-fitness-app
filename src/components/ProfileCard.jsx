@@ -1,22 +1,34 @@
-import profile from '../assets/profile.png'
+import profileImg from '../assets/profile.png'
 import arrow from '../assets/arrow.svg'
 import arrowStartWorkout from '../assets/arrowStartWorkout.svg'
 import dumbellImg3d from '../assets/dumbellImage3d.png'
+import { useNavigate } from 'react-router-dom'
 
 const ProfileCard = () => {
+    const profile = JSON.parse(localStorage.getItem('auth'))
+    const navigate = useNavigate();
+
+    function goToUpdateProfile() {
+        navigate('/update-profile')
+    }
+
+    function startWorkout() {
+        navigate('/training-ground')
+    }
+
   return (
     <div className='profileCard'>
 
         <div className='profileInfo'>
             <div>
-                <img src={profile} alt='profile-pic' className='profileCardImage'/>
+                <img src={profileImg} alt='profile-pic' className='profileCardImage'/>
             </div>
             <div className='profileCardText'>
                 <div className='profileName'>
-                    <span>Shyam</span>
+                    <span>{profile.user.name ? profile.user.name : "Shyam" }</span>
                 </div>
                 <div className='profileUpdate'>
-                    <span>Update Profile <img className='arrow' src={arrow} alt="arrow" /></span>
+                    <span onClick={goToUpdateProfile}>Update Profile <img className='arrow' src={arrow} alt="arrow" /></span>
                 </div>
             </div>
         </div>
@@ -27,7 +39,7 @@ const ProfileCard = () => {
                     <div className='gymDay'>
                         <span>Gym Day</span>
                     </div>
-                    <button className='startWorkout'>
+                    <button className='startWorkout' onClick={startWorkout}>
                         <span>start workout <img className='arrowStartWorkout' src={arrowStartWorkout} alt="start-workout-arrow" /></span>
                     </button>
                 </div>

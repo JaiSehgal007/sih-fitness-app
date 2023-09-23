@@ -25,12 +25,14 @@ export default function PrivateRoute(){
 
 
             );
+            console.log("res daa ",res.data.ok)
             if(res.data.ok){
                 setOk(true);
-                return ok?<Outlet/> : <Navigate to="/login" replace={true} />
+                console.log("returing outlet ")
+                return <Outlet/>
             }else{
                 setOk(false);
-                return ok?<Outlet/> : <Navigate to="/login" replace={true} />
+                return  <Navigate to="/login" replace={true} />
             }
         }
         if(auth?.token) authCheck();
