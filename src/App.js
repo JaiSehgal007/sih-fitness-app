@@ -64,13 +64,14 @@ function App() {
                 <Route exact path="/main" element={<Main />} />
                 <Route exact path="/profile" element={<Profile />} />
                 <Route exact path="/update-profile" element={<UpdateProfile />} />
+                <Route exact path="/training-ground" element={<TrainGround />} />
             {/* </Route> */}
 
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<PageNotFound />} />
-      <Route path="/train/:exercise" element={<TrainGround />} />
+            <Route path="/train/:exercise" element={<TrainGround />} />
 
     </Routes>
   );

@@ -1,10 +1,14 @@
+import { Link, useNavigate } from 'react-router-dom';
+
 require('./Utility.css')
 
 const Cards = ({ data }) => {
+  const navigate = useNavigate()
   return (
     <div className="container flex-row wrap">
       {data.map((item, index) => (
-        <div key={index} className="card">
+         <Link to={item.link}>
+          <div key={index} className="card">
           <div
             className="cardImg"
             style={{
@@ -13,6 +17,8 @@ const Cards = ({ data }) => {
           />
           <span className="cardLabel">{item.label}</span>
         </div>
+         </Link>
+        
       ))}
     </div>
   );

@@ -253,7 +253,7 @@ function TrainGround() {
   return (
     <div className="flex flex-col justify-center items-center ">
       <header className="flex flex-row justify-around w-full gap-2 m-4" >
-      <Link to="/">
+      <Link to="/main">
         <button 
         className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mx-10"
         >

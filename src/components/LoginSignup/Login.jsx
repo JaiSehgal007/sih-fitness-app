@@ -35,12 +35,11 @@ const Login = () => {
         .then((data) => {
           console.log(data);
           localStorage.setItem('auth', JSON.stringify(data))
+          navigate("/main");
         })
         .catch((error) => {
           console.error(error);
         })
-
-        navigate("/main");
     }
 
     function handleSwitch() {
