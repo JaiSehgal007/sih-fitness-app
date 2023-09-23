@@ -59,7 +59,7 @@ const styles = {
     marginLeft: "auto",
     left: 900,
     right: 0,
-    top: 500,
+    top: 600,
     textAlign: "center",
     color: "#f6ea98",
     background:  "#e26972",
@@ -112,8 +112,10 @@ function TrainGround() {
   const [count, setCount] = React.useState(0);
   const [accuracy, setAccuracy] = React.useState(0);
   const [feedback, setFeedback] = React.useState("");
+  const [visibility, setVisibility] = React.useState(0);
   const [limit, setLimit] = React.useState(-1);
   const [isFinished, setIsFinished] = React.useState(false);
+  const [warning, setWarning] = React.useState("");
   const { exercise } = useParams();
   let camera = null;
   const countTextbox = useRef(null);
@@ -136,12 +138,10 @@ function TrainGround() {
   };
   function onResult(results) {
     if (results.poseLandmarks) {
+      // get confidence score
+      // console.log(results);
       const position = results.poseLandmarks;
-      socket.emit(
-        "train",
-        JSON.stringify(dummyObject),
-        JSON.stringify(position)
-      );
+     
       // setTimeout(() => {
 
       // }, 500);
@@ -156,12 +156,25 @@ function TrainGround() {
       // //ratios between 0-1, covert them to pixel positions
       const upadatedPos = [];
       const indexArray = exrInfo[exercise].index;
-
+      let vis = 1;
       for (let i = 0; i < 3; i += 1) {
         upadatedPos.push({
           x: position[indexArray[i]].x * width,
           y: position[indexArray[i]].y * height,
         });
+        vis = Math.min(vis,position[indexArray[i]].visibility);
+      }
+      setVisibility(vis);
+      if(vis>=0.9){
+        setWarning("");
+        socket.emit(
+          "train",
+          JSON.stringify(dummyObject),
+          JSON.stringify(position)
+        );
+      }
+      else {
+         setWarning("Not visible!");
       }
 
       const canvasElement = canvasRef.current;
@@ -202,6 +215,9 @@ function TrainGround() {
       setAccuracy(jsonFeedback.accuracy);
       setFeedback(jsonFeedback.feedback);
       setLimit(jsonFeedback.limit);
+      if(jsonFeedback.finished) {
+        socket.disconnect();
+      }
       if (jsonFeedback.finished) setIsFinished(true);
       else setIsFinished(false);
     });
@@ -304,10 +320,24 @@ function TrainGround() {
               Math.round(accuracy * 100) / 100
             }</span>
             </h1>
+            <h1>Visibility : 
+            <span>{
+              Math.round(visibility * 100) / 100
+            }</span>
+            </h1>
+            
           </p>
         </div>
         
       </div>
+      {
+              warning && <h1
+              className="text-red-500 text-lg"  
+              >Warning &nbsp;: &nbsp;
+            <span>{warning}</span>
+            </h1>
+            }
+
       <div style={styles.insBox} className="p-9 w-1/3 flex gap-2 flex-col
        space-x-4 space-y-4
       ">
