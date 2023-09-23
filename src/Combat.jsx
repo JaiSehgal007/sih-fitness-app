@@ -6,21 +6,22 @@ import Workouts from './components/Workouts'
 import History from './components/History'
 import './index.css'
 
-function Main() {
+function Combat() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
       <Navbar />
-      <ProfileComponent />
-      <Routines />
-      <Workouts />
-      <div className='historyAndCalendar'>
-        <Calendar />
-        <History />
-      </div>
+      <div className='pageUnderConstruction'>
+        <div>
+          <p className='pageUnderConstructionHeading'>Combat Arena</p>
+        </div>
+       <div>
+          <p className='pageUnderConstructionPage'>the page is under construction</p>
+       </div>
+    </div>
     </>
   )
 }
 
-export default Main
+export default Combat

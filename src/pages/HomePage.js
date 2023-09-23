@@ -59,7 +59,7 @@ const HomePage = () => {
         </div>
       </div>
       <Header />
-      <div id="features" className="absolute top-[1284px] left-[0px] bg-black w-[1441px] h-[629px] overflow-hidden flex flex-col py-32 px-[314px] box-border items-center justify-center text-[52.9px]">
+      <div id="features" className="absolute top-[1284px] left-[0px] bg-black w-screen h-[629px] overflow-hidden flex flex-col py-32 px-[314px] box-border items-center justify-center text-[52.9px]">
         <div className="flex flex-col items-center justify-start gap-[84.65px]">
           <div className="flex flex-col items-center justify-center gap-[31.74px]">
             <b className="relative tracking-[-0.03em] leading-[110%]">
