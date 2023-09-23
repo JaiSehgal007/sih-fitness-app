@@ -114,11 +114,16 @@ function TrainGround() {
   [
     isFinished
   ]);
-
+  const dummyObject = {
+    userId: "650e4912b33d630700b9a225",
+    eId: "650e4bea318fe44f3a3c0d14"
+  }
   function onResult(results) {
     if (results.poseLandmarks) {
       const position = results.poseLandmarks;
-      socket.emit('train', 0,JSON.stringify(position));
+      socket.emit('train', 
+      JSON.stringify(dummyObject)
+      ,JSON.stringify(position));
       // setTimeout(() => {
         
       // }, 500);
