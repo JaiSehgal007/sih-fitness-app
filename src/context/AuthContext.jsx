@@ -1,11 +1,12 @@
 import {useState,useEffect,useContext,createContext} from 'react';
 import axios from 'axios';
+import { data } from 'autoprefixer';
 
 const Authcontext = createContext();
 
 const AuthProvider=({children})=>{
     //  now by declaring this inside the auth provider we have made this state global
-    const [auth,setAuth]=useState({
+    const [auth, setAuth] = useState({
         user:null,
         token:""
     });
@@ -35,6 +36,6 @@ const AuthProvider=({children})=>{
 }
 
 // making a custom hook
-const useAuth=()=> useContext(Authcontext)
+const useAuth = () => useContext(Authcontext)
 
 export {useAuth,AuthProvider};
