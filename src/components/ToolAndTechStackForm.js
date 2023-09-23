@@ -1,4 +1,4 @@
-import techstack from "./Assets/techstack-modified.png"
+import techstack from "./Assets/techstack.png"
 
 const ToolAndTechStackForm = () => {
   return (
@@ -14,6 +14,7 @@ const ToolAndTechStackForm = () => {
             className="relative rounded-3xs w-[1200px] h-[360px] overflow-hidden shrink-0"
             alt=""
             src={techstack}
+            style={{width: 1050}}
           />
         </div>
       </div>
