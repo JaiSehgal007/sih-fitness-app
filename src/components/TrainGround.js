@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Pose } from "@mediapipe/pose";
 import * as cam from "@mediapipe/camera_utils";
 import Webcam from "react-webcam";
@@ -121,9 +121,6 @@ function TrainGround() {
   let camera = null;
   const countTextbox = useRef(null);
   const [auth, setAuth] = useAuth();
-  if(!auth) {
-    return <p> No user found </p>;
-  }
   // recieve on feedback event after 500ms
   // if finished excercise close camera and medapipe
   useEffect(() => {
@@ -137,10 +134,14 @@ function TrainGround() {
     // disconnect
     window.location.href = "/main";
   }, [isFinished]);
-  const dummyObject = {
-    userId: auth.user.id,
-    eId: "650e4bea318fe44f3a3c0d14",
-  };
+  const  [dummyObject,setDummy] = useState({userId:null,eId:null});
+   useState(()=>{
+    if(!auth) return;
+      setDummy({
+        userId: auth.user?.id,
+        eId: "650e4bea318fe44f3a3c0d14",
+      })
+   },[auth])
   function onResult(results) {
     if (results.poseLandmarks) {
       // get confidence score
@@ -322,7 +323,7 @@ function TrainGround() {
           <p>
             <h1>Accuracy : 
             <span>{
-              Math.round(accuracy * 100) / 100
+              (Math.round(accuracy * 100) / 100 )==0 ? Math.round(accuracy * 100) / 100 :100- Math.round(accuracy * 100) / 100
             }</span>
             </h1>
             <h1>Visibility : 

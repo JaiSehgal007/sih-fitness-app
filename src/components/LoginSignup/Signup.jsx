@@ -26,7 +26,7 @@ const Signup = () => {
   const registerUser = async (userData) => {
     try {
       const response = await axios.post('https://sih-fitness-app-api.onrender.com/api/v1/auth/register', userData);
-      if(!response.ok) throw new Error("Something went wrong while registrering")
+      // if(!response.ok) throw new Error("Something went wrong while registrering")
       return response.data;
     } catch (error) {
       console.error('Error registering user:', error);
