@@ -1,10 +1,10 @@
-# MotionMentor
+# FitQuest
 
-This is the GitHub repository for "MotionMentor". It is a project developed as part of the Smart India Hackathon 2023, on problem statement student innovation, ID:1494, which involves project having Ideas that can boost fitness activities and assist in keeping fit.
+This is the GitHub repository for "FitQuest". It is a project developed as part of the Smart India Hackathon 2023, on problem statement student innovation, ID:1494, which involves project having Ideas that can boost fitness activities and assist in keeping fit.
 
-## What is MotionMentor?
+## What is FitQuest?
 
-MotionMentor is a cutting-edge fitness app designed to guide users in performing exercises correctly by capturing and analyzing their body movements. It also helps users manage their daily workout routines and track their calorie intake. MotionMentor is your personal fitness companion, ensuring that you achieve optimal form and efficiency in your workouts while also assisting in achieving your fitness and nutrition goals.
+FitQuest is a cutting-edge fitness app designed to guide users in performing exercises correctly by capturing and analyzing their body movements. It also helps users manage their daily workout routines and track their calorie intake. FitQuest is your personal fitness companion, ensuring that you achieve optimal form and efficiency in your workouts while also assisting in achieving your fitness and nutrition goals.
 
 ## Features
 * **Posture Monitoring:**  Uses the Machine Learning Libraries such as openCV and MediaPipe to guide correct exercise form to prevent injuries and optimize workouts.
