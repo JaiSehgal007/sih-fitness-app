@@ -25,7 +25,7 @@ const Navbar = () => {
                     <img src={logo} alt='logo' className='logo'/>
                 </div>
                 <a href="/">
-                <span>FitCoach</span>
+                <span>FitQuest</span>
 
                 </a>
             </div>

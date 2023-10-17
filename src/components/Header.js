@@ -24,7 +24,7 @@ const Header = () => {
               src="/dumbbell.svg"
             />
             <div className="relative tracking-[-0.04em] leading-[150%] font-semibold">
-              <a href="/" style={{textDecoration: 'none', color: 'white'}}>FitCoach</a>
+              <a href="/" style={{textDecoration: 'none', color: 'white'}}>FitQuest</a>
             </div>
           </div>
         </div>

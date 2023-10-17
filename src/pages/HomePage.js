@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import ToolAndTechStackForm from "../components/ToolAndTechStackForm";
 import DeveloperCard from "../components/DeveloperCard";
-import FitCoachContainer from "../components/FitCoachContainer";
+import FitQuestContainer from "../components/FitQuestContainer";
 import { Link } from "react-router-dom";
 function geAuth(){
   const data=localStorage.getItem('auth')
@@ -33,7 +33,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="relative text-[25.22px] leading-[150%] inline-block w-[1037.1px]">
-          FitCoach is an AI-powered fitness app that provides personalized
+          FitQuest is an AI-powered fitness app that provides personalized
           training regimes, expert guidance, real-time feedback and competitiveness to help
           users achieve their fitness goals.
         </div>
@@ -78,7 +78,7 @@ const HomePage = () => {
               A Complete Fitness Trainer
             </b>
             <div className="relative text-[18.52px] leading-[150%] inline-block w-[1073.23px]">
-              Like having a personal virtual trainer, FitCoach provides 24/7 real-time monitoring of body postures, ensuring correct form during exercise and thus preventing injuries. FitBot AI chatbot tracks workout routines and provides personalized diet recommendations based on their age, gender and current level. FitCoach creates a motivating environment by ranking users within their age and gender category, providing a healthy competition that encourages exercise and fitness. Users receive badges, trophies, and accolades.
+              Like having a personal virtual trainer, FitQuest provides 24/7 real-time monitoring of body postures, ensuring correct form during exercise and thus preventing injuries. FitBot AI chatbot tracks workout routines and provides personalized diet recommendations based on their age, gender and current level. FitQuest creates a motivating environment by ranking users within their age and gender category, providing a healthy competition that encourages exercise and fitness. Users receive badges, trophies, and accolades.
             </div>
           </div>
           <div className="flex flex-row items-start justify-start gap-[79.36px] text-left text-[31.74px]">
@@ -159,7 +159,7 @@ const HomePage = () => {
       </div>
       <ToolAndTechStackForm />
       <DeveloperCard />
-      <FitCoachContainer />
+      <FitQuestContainer />
     </div>
   );
 };

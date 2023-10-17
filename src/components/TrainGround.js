@@ -120,7 +120,6 @@ function TrainGround() {
   const { exercise } = useParams();
   let camera = null;
   const countTextbox = useRef(null);
-  const [auth, setAuth] = useAuth();
   // recieve on feedback event after 500ms
   // if finished excercise close camera and medapipe
   useEffect(() => {
@@ -136,13 +135,14 @@ function TrainGround() {
   }, [isFinished]);
   const  [dummyObject,setDummy] = useState({userId:null,eId:null});
    useState(()=>{
-    if(!auth) return;
+    const auth = JSON.parse(localStorage.getItem('auth'));
+    console.log("iser id ",auth.user);
       setDummy({
         userId: auth.user?.id,
         eId: "650e4bea318fe44f3a3c0d14",
       })
-   },[auth])
-  function onResult(results) {
+   },[])
+  function onResult(results) { 
     if (results.poseLandmarks) {
       // get confidence score
       // console.log(results);
@@ -171,7 +171,7 @@ function TrainGround() {
         vis = Math.min(vis,position[indexArray[i]].visibility);
       }
       setVisibility(vis);
-      if(vis>=0.9){
+      if(vis>=0.75){
         setWarning("");
         socket.emit(
           "train",
