@@ -24,16 +24,18 @@ const HomePage = () => {
           </div>
         </div>
         <div className="relative w-[1208px] h-[252px] text-[114.73px]">
-          <div className="absolute top-[-21.76px] left-[190px] rounded-[50%] bg-mediumspringgreen [filter:blur(116.31px)] w-[328px] h-[253.56px]" />
-          <div className="absolute top-[0px] left-[0px] tracking-[-0.02em] leading-[110%] inline-block w-[1208px]">
+          <div className="movingBg" />
+          {/* <div className="movingBg2" />
+          <div className="movingBg3" /> */}
+          <div className="absolute top-[0px] left-[0px] tracking-[-0.02em] leading-[110%] inline-block w-[1208px] z-10">
             <b>{`Personalized `}</b>
             <span className="font-extralight">
               training re-imagined with AI
             </span>
           </div>
         </div>
-        <div className="relative text-[25.22px] leading-[150%] inline-block w-[1037.1px]">
-          FitQuest is an AI-powered fitness app that provides personalized
+        <div className="relative text-[25.22px] leading-[150%] inline-block w-[1037.1px] higherZIndex">
+          FitCoach is an AI-powered fitness app that provides personalized
           training regimes, expert guidance, real-time feedback and competitiveness to help
           users achieve their fitness goals.
         </div>
@@ -43,7 +45,7 @@ const HomePage = () => {
             alt=""
             src="/fire.svg"
           />
-          <div className="relative leading-[150%] font-medium">
+          <div className="relative leading-[150%] font-medium higherZIndex">
             <Link to={!auth ? "/login" : "/main"} 
             
             style={{textDecoration: 'none', color: 'black'}}>

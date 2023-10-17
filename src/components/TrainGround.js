@@ -6,7 +6,7 @@ import { useRef, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import socketIO from "socket.io-client";
 import { useAuth } from "../context/AuthContext";
-const API = "http://localhost:3001";
+const API = "https://localhost:3001";
 
 function angleBetweenThreePoints(pos) {
   var a = Math.pow(pos[1].x - pos[0].x, 2) + Math.pow(pos[1].y - pos[0].y, 2);
@@ -295,7 +295,7 @@ function TrainGround() {
             <button
               size="large"
               variant="contained"
-              style={{ backgroundColor: "#b3a69f", fontWeight: "bold" }}
+              style={{ backgroundColor: "#A13951", fontWeight: "bold" }}
             >
               Back
             </button>

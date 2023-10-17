@@ -36,8 +36,8 @@ const ActivityCard = () => {
 
         <div 
         >
-                {/* <DonutChart /> */}
-                {
+                <DonutChart />
+                {/* {
                   levels.length ? levels.map((level) => {
                     return (
                        <div>
@@ -51,7 +51,7 @@ const ActivityCard = () => {
                   >
                     <p> Fetching Statistics...</p>
                   </div>
-                }
+                } */}
         </div>
 
     </div>
