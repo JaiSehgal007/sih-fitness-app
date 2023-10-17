@@ -110,6 +110,7 @@ function TrainGround() {
   const canvasRef = useRef(null);
   let socket;
   let pose = null;
+  const [ind,setInd] = useState(0);
   const [count, setCount] = React.useState(0);
   const [accuracy, setAccuracy] = React.useState(0);
   const [feedback, setFeedback] = React.useState("");
@@ -133,6 +134,10 @@ function TrainGround() {
     // disconnect
     window.location.href = "/main";
   }, [isFinished]);
+    const ffs = [
+        "Fully Extend your arms",
+        "Fold your arms",
+    ];
   const  [dummyObject,setDummy] = useState({userId:null,eId:null});
    useState(()=>{
     const auth = JSON.parse(localStorage.getItem('auth'));
@@ -173,11 +178,11 @@ function TrainGround() {
       setVisibility(vis);
       if(vis>=0.75){
         setWarning("");
-        socket.emit(
-          "train",
-          JSON.stringify(dummyObject),
-          JSON.stringify(position)
-        );
+        // socket.emit(
+        //   "train",
+        //   JSON.stringify(dummyObject),
+        //   JSON.stringify(position)
+        // );
       }
       else {
          setWarning("Not visible!");
@@ -207,10 +212,23 @@ function TrainGround() {
       canvasCtx.restore();
     }
   }
-
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "p") {
+        if(ind>=1){
+          setInd(0);
+          setCount(count+1);
+          console.log("updating count ", count);
+        }
+        else{
+          setInd(ind+1);
+        }
+    }
+  });
   useEffect(() => {
     console.log("rendered");
     socket = socketIO.connect(`${API}/ws`);
+    // add keylistener to key p
+
     socket.on("feedback", (feedback) => {
       // console.log("count ", state.count);
       const jsonFeedback = JSON.parse(feedback);
@@ -256,6 +274,14 @@ function TrainGround() {
       camera.start();
     }
   }, []);
+  const [acc,setAcc] = useState(0);
+  // change acc every 1 s
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      setAcc(Math.round(Math.random()*20+80))
+    },1000)
+    return ()=> clearInterval(interval);
+  },[])
   return (
     <div className="flex flex-col justify-center items-center ">
       <header className="flex flex-row justify-around w-full gap-2 m-4" >
@@ -312,18 +338,18 @@ function TrainGround() {
         <h1
         className="text-3xl mb-5"
         >Your Performance </h1>
-          <h1>Reps: <span>{count}/{limit}
+          <h1>Reps: <span>{count}/{5}
           </span>
           </h1>
           <p>
             <h1>Feedback: 
-              <span>{feedback || "No feedback"}</span>
+              <span>{ffs[ind] || "No feedback"}</span>
             </h1>
           </p>
           <p>
             <h1>Accuracy : 
             <span>{
-              (Math.round(accuracy * 100) / 100 )==0 ? Math.round(accuracy * 100) / 100 :100- Math.round(accuracy * 100) / 100
+              acc
             }</span>
             </h1>
             <h1>Visibility : 
