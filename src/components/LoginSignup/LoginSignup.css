@@ -8,7 +8,7 @@ body{
 }
 
 .bg{
-    background: linear-gradient(black, #2a6c56);
+    background: linear-gradient(black, #A13951);
     padding-bottom: 130px;
     overflow: hidden;
 }
@@ -95,7 +95,7 @@ body{
 }
 
 .forgot-password span{
-    color: #2a6c56;
+    color: #f4728e;
     cursor: pointer;
 }
 
@@ -112,7 +112,7 @@ body{
     width: 220px;
     height: 59px;
     color: white;
-    background: #2a6c56;
+    background: #f15377;
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
